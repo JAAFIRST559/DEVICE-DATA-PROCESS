@@ -1,0 +1,28 @@
+# main.yml
+
+service:
+  name: DeviceDataService
+  endpoints:
+    - name: ProcessData
+      requestType: DeviceDataRequest
+      responseType: ProcessDataResponse
+    # Add more endpoints as needed
+
+messages:
+  - name: DeviceDataRequest
+    fields:
+      - name: deviceId
+        type: string
+      - name: data
+        type: bytes
+      # Add more fields as per your data structure
+
+  - name: ProcessDataResponse
+    fields:
+      - name: success
+        type: bool
+      - name: message
+        type: string
+      # Add more fields if necessary
+
+# Define services and message types according to your application requirements
